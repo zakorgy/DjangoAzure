@@ -20,12 +20,14 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': path.join(PROJECT_ROOT, 'db.sqlite3'),
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
+        'ENGINE'    : 'sql_server.pyodbc',
+        'NAME'      : 'beosztasAppDB',
+        'USER'      : 'zakorgy@beosztasappserver.database.windows.net',
+        'PASSWORD'  : 'Luipadr3',
+        'HOST'      : 'beosztasappserver.database.windows.net',
+        'OPTIONS'   : {
+            'driver': 'SQL Server',
+        }
     }
 }
 
